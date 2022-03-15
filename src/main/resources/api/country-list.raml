@@ -1,0 +1,82 @@
+#%RAML 1.0
+title: Country List
+version: v1
+description: These APIs are used to fetch common data to all APIs in the ABC System.
+protocols:
+  - http
+/master/country:
+  get:
+    description: This API is used to fetch Country List in ABC.
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include examples/response/mastercountry-responce.json
+/master/1/state:
+  get:
+    description: This API is used to fetch State List for a Country in ABC.
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include examples/response/masterstate-response.json
+/masters:
+  get:
+    description: This API is used to fetch Master Data List in ABC.
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include examples/response/masterdata-responce.json
+/Deposits/deposits:
+  get:
+    description: These APIs are used to perform operations on Deposits in the ABC System.
+    queryParameters:
+      merchantId:
+        type: string
+        required: true
+      limit:
+        type: string
+        required: true
+      offset:
+        type: string  
+        required: true
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include examples/response/deposit-response.json
+/Deposits/saleTransactions:
+  get:
+    description: This API is to get all Sale Transactions
+    queryParameters:
+      startDate:
+        type: string  
+        required: true
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include examples/response/depositsales-response.json
+            
+              
+                            
+              
+            
+        
+        
+
+          
+            
+          
+    
+
+      
+                
+              
+
+              
+
+            
+          
+        
