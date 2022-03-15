@@ -7018,7 +7018,7 @@ output application/json
     }, 
     {
       CardFeeTemplateId: 69002,
-      CardFeeTemplateName: "American Express Qualified Credit",
+      CardFeeTemplateName: "American Fast Express Qualified Credit",
       Occurrence: "Transaction",
       FeeEntryMax: 0.3,
       FeeEntryMin: 0.1,
